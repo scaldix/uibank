@@ -1,0 +1,31 @@
+<div class="container-fluid card login-container">
+  <h3 class="text-center">Login</h3>
+  <p><em></em></p>
+  <hr>
+  <form >
+    <div class="mb-3 row">
+      <label for="nom" class="col-sm-2 col-form-label">Nom :</label>
+      <div class="col-sm-10">
+        <input type="nom" name="nom" id="name" placeholder="Votre nom" required>
+      </div>
+
+      <label for="login" class="col-sm-2 col-form-label">Email :</label>
+      <div class="col-sm-10">
+        <input type="email"  name="email" id="login" placeholder="123@co.uk">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="password" class="col-sm-2 col-form-label">Password :</label>
+      <div class="col-sm-10">
+        <input type="password"  name="password" id="inputPassword" placeholder="azerty ou querty">
+      </div>
+    </div>
+  </form>
+  <div class="d-flex justify-content-between mb-3">
+    <button (click)="login()" type="button" class="btn btn-primary" >
+      <em class="fas fa-sign-in-alt">&nbsp;Se connecter</em>
+    </button>
+  </div>
+</div>
+
+
