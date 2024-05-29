@@ -1,7 +1,7 @@
 <nav class="card navbar navbar-expand-lg navbar-light mb-2 mt-2" style="background-color: #e3f2fd;">
   <div class="container-fluid d-flex justify-content-between">
     <div class="d-flex">
-      <a class="navbar-brand" >BK</a>
+      <a class="navbar-brand" [routerLink]="'/user/bk'" data-toggle="tooltip" data-placement="bottom" title="A propos de l'application">BK</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,23 +9,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" >Tableau de bord</a>
+            <a class="nav-link active" [routerLink]="'/user'" >Dashboard</a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" >Mes transactions</a>
+            <a class="nav-link" [routerLink]="'/user/matr'" >Transactions</a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" >Ma liste de contacts</a>
+            <a class="nav-link" [routerLink]="'/user/macl'" >Liste-Contacts</a>
           </li>
         </ul>
       </div>
     </div>
     <div class="d-flex align-items-center">
-      <a  class="btn btn-success me-3" type="submit">
-        <em class="fas fa-plus"></em>&nbsp;Nouvelle transaction
-      </a>
-      <a  class="btn btn-danger me-3" type="button">Se déconnecter</a>&nbsp;
-      <a>
+      <a  class="btn btn-danger me-3" type="button" (click)="logout()" *ngIf="auth.isLoggedIn">Se déconnecter</a>&nbsp;
+      <a [routerLink]="'/user/profile'">
         Profile
       </a>
     </div>

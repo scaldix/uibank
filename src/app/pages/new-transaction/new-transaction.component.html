@@ -1,0 +1,43 @@
+<div class="p-3 text-bg-light">
+  <h2>Nouvelle transaction</h2>
+  <div class="card p-3">
+    <h3>Le solde de votre compte: {{amount}}€</h3>
+    <form>
+      <div class="mb-3">
+        <label for="" class="form-label">Type de transaction</label>
+        <select class="form-select" aria-label="oki">
+          <option selected>Open this</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Choisissez un contact</label>
+        <select class="form-select" aria-label="oki">
+          <option selected>Open this</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">Montant</label>
+        <input type="number" class="form-control" id="amount" placeholder="Ex: 500€">
+      </div>
+      <div class="mb-3">
+        <label for="iban" class="form-label">IBAN</label>
+        <input type="number" class="form-control" id="iban" placeholder="FR92 0000 4521 5256 2541">
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-link">
+          <em class="fas fa-times"></em>&nbsp;Cancel
+        </button>
+        <button type="button" class="btn btn-danger">
+          <em class="fas fa-save"></em>&nbsp;Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
