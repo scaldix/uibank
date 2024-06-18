@@ -22,7 +22,7 @@ export const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'new-t', component: NewTransactionComponent },
       { path: 'new-c', component: NewContactComponent },
-      { path: 'bk', component: AProposComponent},
+      { path: 'infos', component: AProposComponent},
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ] },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
