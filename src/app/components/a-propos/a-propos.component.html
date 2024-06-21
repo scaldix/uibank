@@ -164,36 +164,33 @@
   </div>
   <div class="text-bg-light container-fluid card login-container mb-5">
     <h2 class="py-3">FORMULAIRE DE CONTACT</h2>
-    <form class="row g-3">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="row g-3">
       <div class="col-md-6">
         <label for="nom" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="nom" required>
+        <input type="text" formControlName="nom" class="form-control" id="nom" required>
       </div>
       <div class="col-md-6">
         <label for="tel" class="form-label">Tel</label>
-        <input type="text" class="form-control" id="tel" required>
+        <input type="text" formControlName="tel" class="form-control" id="tel" required>
       </div>
       <div class="col-md-6">
         <label for="fonction" class="form-label">Fonction</label>
-        <input type="text" class="form-control" id="fonction" required>
+        <input type="text" formControlName="fonction" class="form-control" id="fonction" required>
       </div>
       <div class="col-md-6">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email">
+        <input type="email" formControlName="email" class="form-control" id="email" required>
       </div>
       <div class="col-6">
         <label for="objet" class="form-label">Objet</label>
-        <input type="text" class="form-control" id="objet">
+        <input type="text" formControlName="objet" class="form-control" id="objet" required>
       </div>
       <div class="mb-3">
-        <label for="validationTextarea" class="form-label">Message</label>
-        <textarea class="form-control" id="validationTextarea" placeholder="En cours d'implémentation..." required></textarea>
-        <div class="invalid-feedback">
-          Vos commentaires...
-        </div>
+        <label for="message" class="form-label">Message</label>
+        <textarea formControlName="message" class="form-control" id="message" placeholder="Faite moi part de vos commentaires, suggestions ou offres d'emploi" required></textarea>
       </div>
       <div class="footer d-flex justify-content-end col-12 mb-3 ml-auto">
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Envoyer</button>
       </div>
     </form>
   </div>
